@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Vie en  – Speisekarte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header class="hero">
+  <div class="hero-overlay">
+    <p class="eyebrow">Cafe • Mödling</p>
+    <h1>La Vie en</h1>
+    <p>Italienische Küche mit Liebe & Leidenschaft</p>
+    <a href="#speisekarte" class="button">Speisekarte ansehen</a>
+  </div>
+</header>
+
+<section class="intro">
+  <h2>Willkommen bei La Vie en</h2>
+  <p>
+    Genießen Sie ausgewählte Spezialitäten, frische Zutaten
+    und mediterrane Küche in stilvollem Ambiente.
+  </p>
+</section>
+
+<section id="speisekarte" class="menu">
+
+  <h2>Speisekarte</h2>
+
+  <div class="menu-grid">
+
+    <div class="category">
+      <h3>Fisch</h3>
+
+      <div class="dish">
+        <h4>Filets vom Emder Logger-Matjes</h4>
+        <p>mit Joghurtsauce, Zwiebel, Apfel, grüne Speckbohnen, knusprige Bratkartoffeln</p>
+        <span>22,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Gebratene Schollenfilets</h4>
+        <p>mit Nordseekrabben, Zitronen-Butter-Schaum, Ratatouille, geröstete Pinienkerne, Kartoffel-Safranpüree</p>
+        <span>25,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Filet vom norwegischen Fjordlachs</h4>
+        <p>kross auf der Haut gebraten mit Dill-Senfsauce, glasierten Karotten, Zuckererbsen, Parmesan-Fenchelrisotto</p>
+        <span>26,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Variation von Nordseefischen</h4>
+        <p>frische Kutterscholle und verschiedene Filets nach Tagesfang, Butterkartoffeln, Meersalzflocken, junge Blattsalate in Dill-Senf-Vinaigrette</p>
+        <span>27,90 €</span>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Fleisch</h3>
+
+      <div class="dish">
+        <h4>Zarte Maishähnchenbrust</h4>
+        <p>mit Tomaten, Mozzarella und Basilikum gratiniert, auf Pestotagliatelle, gelbes Paprika-Chutney</p>
+        <span>21,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Wiener Kalbsschnitzel</h4>
+        <p>mit Panko-Panade und Kapern-Zitronen-Butter, Röstkartoffeln mit Gartenkräutern, Gurkensalat in Joghurt-Dill-Dressing</p>
+        <span>26,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Trilogie vom Filet</h4>
+        <p>Rinderfilet, Maishähnchenbrust und Schweinefilet mit feinen Kräuterjus, Bohnen im Speckmantel, Trüffelgnocchi</p>
+        <span>27,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Black Angus Rumpsteak</h4>
+        <p>mit rauchiger Whiskey-Pfeffer-Sauce, knusprige Röstzwiebeln, cremige Trüffel-Polenta</p>
+        <span>29,90 €</span>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Vegan</h3>
+
+      <div class="dish">
+        <h4>Süßkartoffel-Linsen-Curry</h4>
+        <p>mit Kokosmilch, Koriander und Wildreis</p>
+        <span>19,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Tomaten-Ragout</h4>
+        <p>mit schwarzen Oliven und gebratenen Artischocken, Penne Rigate</p>
+        <span>19,90 €</span>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Vegetarisch</h3>
+
+      <div class="dish">
+        <h4>Friesischer Ziegenkäse</h4>
+        <p>in Brickteig, mit Rosmarinhonig, getrockneten Tomaten, mediterranem Gemüse</p>
+        <span>19,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Trüffel-Tagliatelle</h4>
+        <p>mit Kirschtomaten, wildem Brokkoli und Parmesan</p>
+        <span>21,90 €</span>
+      </div>
+
+      <div class="dish">
+        <h4>Grünkern-Käse-Medaillons</h4>
+        <p>auf pikantem Paprika-Kartoffelstampf und Röstzwiebeln</p>
+        <span>22,90 €</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="photos">
+  <h2>Unsere Speisekarte</h2>
+
+  <img src="IMG_3705.jpeg" alt="Speisekarte">
+  <img src="IMG_3706.jpeg" alt="Speisekarte">
+  <img src="IMG_3708.jpeg" alt="Speisekarte">
+  <img src="IMG_3709.jpeg" alt="Speisekarte">
+  <img src="IMG_3710.jpeg" alt="Speisekarte">
+  <img src="IMG_3711.jpeg" alt="Speisekarte">
+</section>
+
+<footer>
+  <h2>La Vie en</h2>
+  <p>Cafe • Mödling</p>
+</footer>
+
+</body>
+</html>
