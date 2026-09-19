@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La Vie en – Speisekarte</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f3ed;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .hero {
+      min-height: 75vh;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
+        url("IMG_3705.jpeg") center/cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 30px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(55px, 12vw, 110px);
+      font-weight: normal;
+      letter-spacing: 3px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 15px 0 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: white;
+      color: #222;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      padding: 70px 25px 40px;
+    }
+
+    .intro h2,
+    .menu h2,
+    .gallery h2 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    .menu {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px 80px;
+    }
+
+    .menu > h2 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .category {
+      margin-bottom: 55px;
+    }
+
+    .category h3 {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+
+    .dish {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid #e1ded7;
+    }
+
+    .dish h4 {
+      font-family: Georgia, serif;
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .dish p {
+      color: #777;
+      font-size: 15px;
+      max-width: 750px;
+    }
+
+    .dish span {
+      white-space: nowrap;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .gallery {
+      background: #ebe7df;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .gallery-grid img:first-child {
+      grid-column: span 2;
+      height: 500px;
+    }
+
+    .drink {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .drink img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .drink-text h2 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .drink-text p {
+      color: #666;
+      font-size: 17px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    footer h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #ccc;
+      margin: 5px;
+    }
+
+    @media (max-width: 700px) {
+
+      .hero {
+        min-height: 65vh;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .intro h2,
+      .menu h2,
+      .gallery h2,
+      .drink-text h2 {
+        font-size: 34px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid img:first-child {
+        grid-column: span 1;
+        height: 350px;
+      }
+
+      .gallery-grid img {
+        height: 300px;
+      }
+
+      .drink {
+        grid-template-columns: 1fr;
+      }
+
+      .dish {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .dish span {
+        align-self: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">Café • Mödling</p>
+
+      <h1>La Vie en</h1>
+
+      <p>
+        Italienische Küche mit Liebe & Leidenschaft
+      </p>
+
+      <a href="#speisekarte" class="button">
+        Speisekarte ansehen
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <h2>Willkommen bei La Vie en</h2>
+
+    <p>
+      Genießen Sie ausgewählte Spezialitäten,
+      frische Zutaten und mediterrane Küche
+      in stilvollem Ambiente.
+    </p>
+
+  </section>
+
+
+  <!-- SPEISEKARTE -->
+
+  <section id="speisekarte" class="menu">
+
+    <h2>Speisekarte</h2>
+
+
+    <!-- FISCH -->
+
+    <div class="category">
+
+      <h3>Fisch</h3>
+
+      <div class="dish">
+        <div>
+          <h4>Filets vom Emder Logger-Matjes</h4>
+          <p>
+            Mit Joghurtsauce, Zwiebel, Apfel und grünen Kräutern
+          </p>
+        </div>
+
+        <span>22,90 €</span>
+      </div>
+
+
+      <div class="dish">
+        <div>
+          <h4>Gebratene Schollenfilets</h4>
+          <p>
+            Mit Nordseekrabben und Zitronen-Butter-Sauce
+          </p>
+        </div>
+
+        <span>25,90 €</span>
+      </div>
+
+
+      <div class="dish">
+        <div>
+          <h4>Filet vom norwegischen Fjordlachs</h4>
+          <p>
+            Kross auf der Haut gebraten mit Dill-Senf-Sauce
+          </p>
+        </div>
+
+        <span>26,90 €</span>
+      </div>
+
+    </div>
+
+
+    <!-- FRÜHSTÜCK -->
+
+    <div class="category">
+
+      <h3>Frühstück & Toast</h3>
+
+
+      <div class="dish">
+
+        <div>
+          <h4>Scrambled Egg Toast</h4>
+
+          <p>
+            Geröstetes Brot mit cremigem Rührei,
+            Avocado, Blattsalat, Kirschtomaten,
+            Parmesan und Balsamico
+          </p>
+        </div>
+
+        <span>14,90 €</span>
+
+      </div>
+
+
+      <div class="dish">
+
+        <div>
+          <h4>Salmon Protein Toast</h4>
+
+          <p>
+            Vollkorntoast mit Avocado, Rührei,
+            frischem Lachs, Blattsalat,
+            Kirschtomaten und Parmesan
+          </p>
+        </div>
+
+        <span>18,90 €</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESSERT -->
+
+    <div class="category">
+
+      <h3>Dessert</h3>
+
+
+      <div class="dish">
+
+        <div>
+          <h4>Mohn Cheesecake</h4>
+
+          <p>
+            Cremiger Cheesecake mit Mohn,
+            Beeren und knusprigem Boden
+          </p>
+        </div>
+
+        <span>6,90 €</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALERIE -->
+
+  <section class="gallery">
+
+    <h2>Unsere Spezialitäten</h2>
+
+    <div class="gallery-grid">
+
+      <img src="IMG_3706.jpeg" alt="Salmon Protein Toast">
+
+      <img src="IMG_3708.jpeg" alt="Scrambled Egg Toast">
+
+      <img src="IMG_3709.jpeg" alt="La Vie en Gericht">
+
+    </div>
+
+  </section>
+
+
+  <!-- DRINK -->
+
+  <section class="drink">
+
+    <img
+      src="IMG_3710.jpeg"
+      alt="Strawberry Lemon Refresher"
+    >
+
+    <div class="drink-text">
+
+      <h2>Strawberry Lemon Refresher</h2>
+
+      <p>
+        Fruchtig, frisch und perfekt für einen
+        entspannten Moment bei La Vie en.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>La Vie en</h2>
+
+    <p>Café • Mödling</p>
+
+    <p>Italienische & mediterrane Küche</p>
+
+    <p>© 2026 La Vie en</p>
+
+  </footer>
+
+</body>
+</html>
